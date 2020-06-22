@@ -1,4 +1,4 @@
-pyjwt
-flask
+pyjwt~=1.7.1
+flask~=1.0.2
 gunicorn
-pytest
+pytest~=5.4.3
