@@ -16,8 +16,8 @@ phases:
         - sed -i 's@CONTAINER_IMAGE@'"$REPOSITORY_URI:$TAG"'@' simple_jwt_api.yml
         - $(aws ecr get-login --no-include-email)
         - export KUBECONFIG=$HOME/.kube/config
-        - pip3 install jwt
-        - pip3 install -U pytest
+        - pip install flask-jwt
+        - pip install -U pytest
         - pytest test_main.py
   build:
     commands:
